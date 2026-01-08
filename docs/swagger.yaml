@@ -2997,7 +2997,11 @@ paths:
       description: if config file not exist try to redirect to install page
       produces:
       - application/json
-      responses: {}
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
       summary: if config file not exist try to redirect to install page
       tags:
       - installation
@@ -4360,7 +4364,7 @@ paths:
       - description: question_id
         in: query
         name: question_id
-        required: true
+        # required: true
         type: string
       - description: order
         in: query
@@ -5699,7 +5703,7 @@ paths:
         type: integer
       - in: query
         name: question_id
-        required: true
+        # required: true
         type: string
       responses:
         "200":
@@ -5895,7 +5899,7 @@ paths:
         description: question_id
         in: query
         name: question_id
-        required: true
+        # required: true
         type: string
       produces:
       - application/json
@@ -6740,7 +6744,7 @@ paths:
         description: code
         in: query
         name: code
-        required: true
+        # required: true
         type: string
       produces:
       - application/json
@@ -7487,3 +7491,6 @@ securityDefinitions:
     name: Authorization
     type: apiKey
 swagger: "2.0"
+info:
+  version: 0.0.1
+  title: practical swagger example
